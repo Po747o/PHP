@@ -1,20 +1,19 @@
 <?php
-$n = $_POST["quant"];
-array($n);
+$n = $_POST["numero"]; //Recebe a quantidade total de números fornecida pela usuário
 
 ?>
 
 <html>
+<form method="post" action="exercicio11include.php"> <!--Faz a comparação de cada número para checagem do maior-->
 
-<form method="post" action="includeexercicio11.php">
-    <?php
+<?php
 for ($i = 0; $i < $n; $i++) {
 
-    include "includeexercicio11.html";
+    include "exercicio11include.html";
 
 };
-    ?>
-    <input class="botao" type="submit" value="Checar">
-</form>
+?>
 
+<input class="botao" type="submit" value="Checar">
+</form>
 </html>
