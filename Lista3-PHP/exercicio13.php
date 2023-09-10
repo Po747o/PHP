@@ -1,16 +1,13 @@
 <?php
-
 $n = $_POST["numero"];
 
-echo 'Este(s) número(s) é(são) divisor(es) de ' , $n , '.';
+echo 'Este(s) número(s) é(são) divisor(es) de ' , $n , ': ' ."</br>";
 
-for ($i = 0; $i <= $n; $i++) {
+for ($i = 1; $i <= $n; $i++) {
 
-    if ($n % 3 == 0) {
-        echo $n ."</br>";
+    if ($n % $i == 0) {
+        echo $i ."</br>";
     }
 };
-
-
 
 ?>
