@@ -1,7 +1,7 @@
 <?php
 $n = $_POST["numero"];
 $cont = count($n); //É necessário para que o for identifique a quantidade de posições do array.
-                  //Ele não reconhece a variável $n
+//Ele não reconhece a variável $n
 $lido = 0;
 $maior = $n[0];
 
@@ -34,5 +34,5 @@ for ($i = 0; $i <= $cont; $i++) {
     }
 };*/
 
-echo 'O número ' , $maior , ' é o maior e foi lido ' , $lido , ' vezes.';
+echo 'O número ', $maior, ' é o maior e foi lido ', $lido, ' vezes.';
 ?>
