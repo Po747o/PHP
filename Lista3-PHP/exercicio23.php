@@ -1,34 +1,35 @@
 <?php
 $aleatorio = rand(1, 10);
 $chute = $_POST["chute"];
+$tentativas;
 
-do {
+while ($chute != $aleatorio) {
 
-    if (!is_numeric($chute) || $chute < 1 || $chute > 10) {
+    if (!is_numeric($chute) || $chute != $aleatorio) {
 
         echo 'Você deve fornecer um valor válido, ou seja, apenas números no intervalo de 1 a 1000.' . "</br>";
-        continue;
-
+        echo "\n";
     }
 
-    $chute++;
+    if ($chute == $aleatorio) {
 
-    if ($chute < $aleatorio) {
-
-        echo 'Não foi dessa vez! Chute um número maior!';
-        $chute++;
-
-    } else if ($chute > $aleatorio) {
-
-        echo 'Não foi dessa vez! Chute um número menor!';
-        $chute++;
-
-    } else {
-
-        echo 'Eba! Na mosca!';
-
+        echo 'Eba! Na mosca! Você adivinhou o número ' .$aleatorio. " em " .$tentativas. " tentativas! \n";
+        break;
     }
+    else {
 
-} while ($chute != $aleatorio)
+        if ($chute < $aleatorio) {
 
+            echo 'Não foi dessa vez! Chute um número maior!';
+            $tentativas++;
+        }
+        else {
+
+            echo 'Não foi dessa vez! Chute um número menor!';
+            $tentativas++;
+
+        }
+    }
+    echo "Você tentou " .$tentativas. " vezes.";
+}
 ?>
